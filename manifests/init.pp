@@ -8,6 +8,7 @@ class graphite_powershell (
   $server,
   $install_url          = $graphite_powershell::params::install_url,
   $install_dir          = $graphite_powershell::params::install_dir,
+  $nssm_exe_path        = $graphite_powershell::params::nssm_exe_path,
   $port                 = $graphite_powershell::params::port,
   $metric_path          = $graphite_powershell::params::metric_path,
   $metric_send_interval = $graphite_powershell::params::metric_send_interval,
@@ -24,6 +25,7 @@ class graphite_powershell (
   validate_string($server)
   validate_string($install_url)
   validate_absolute_path($install_dir)
+  validate_absolute_path($nssm_exe_path)
   validate_re($port, '^([0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$')
   validate_string($metric_path)
   validate_re($metric_send_interval, '\d+')

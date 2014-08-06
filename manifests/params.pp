@@ -8,6 +8,7 @@ class graphite_powershell::params {
 
   $install_url = 'https://raw.githubusercontent.com/MattHodge/Graphite-PowerShell-Functions/master/Graphite-PowerShell.ps1'
   $install_dir = 'C:/GraphitePowershell'
+  $nssm_exe_path = 'C:\\Program Files\\nssm.exe'
 
   $port = '2003'
   $metric_path = 'performance.windows'
